@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background: #F4E640;
+  background: #f4e640;
   margin: 0;
-  font-family: 'Roboto';
-  font-size: 1.5em;  
+  font-family: "Roboto";
+  font-size: 1.5em;
 }
 .layout {
   min-height: 100vh;
@@ -21,7 +25,8 @@ header a {
   text-transform: uppercase;
   display: inline-block;
 }
-header h1, header h2 {
+header h1,
+header h2 {
   margin: 0;
 }
 header span {
@@ -45,7 +50,7 @@ footer {
   color: #bbb;
   padding: 40px;
   text-align: center;
-  margin-top: auto
+  margin-top: auto;
 }
 .page-content {
   max-width: 1200px;
@@ -53,4 +58,89 @@ footer {
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.recipe-list {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-y-[20px] gap-x-[60px];
+}
+
+.primary-button {
+  @apply rounded bg-black text-white py-2 px-4 shadow outline-none hover:bg-red-400  active:bg-red-500;
+}
+
+.card {
+  transform: rotateZ(-1deg);
+}
+
+.content {
+  background: #fff;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: relative;
+  top: -40px;
+  left: -10px;
+}
+
+.info {
+  padding: 16px;
+}
+
+.info h4 {
+  margin: 4px 0;
+  text-transform: uppercase;
+}
+
+.info p {
+  margin: 0;
+  color: #777;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions a {
+  color: #fff;
+  background: #f01b29;
+  padding: 16px 24px;
+  text-decoration: none;
+  @apply hover:bg-red-900;
+}
+
+.content {
+  @apply relative;
+}
+
+.actions {
+  @apply absolute right-1 sm:right-[15px] -top-[4px] sm:top-[4px] scale-[0.8] sm:scale-[1];
+}
+
+h3,
+h4 {
+  @apply font-bold text-[18px] sm:text-[24px];
+}
+
+.info p {
+  @apply text-[18px] sm:text-[24px] m-0;
+}
+
+.banner h2 {
+  margin: 0;
+  background: #fff;
+  display: inline-block;
+  padding: 20px;
+  position: relative;
+  top: -60px;
+  left: -10px;
+  transform: rotateZ(-1deg);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info span::after {
+  content: ", ";
+}
+.info span:last-child::after {
+  content: ".";
 }

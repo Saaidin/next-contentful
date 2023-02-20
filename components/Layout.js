@@ -1,3 +1,17 @@
+import Header from "./Header"
+import Footer from "./Footer"
+
+export default function Layout({ children }) {
+  
+  return (
+    <div>
+      <Header/>
+      {children}
+      <Footer />
+    </div>
+  )
+}
+/*
 import Link from "next/link"
 
 export default function Layout({ children }) {
@@ -23,3 +37,4 @@ export default function Layout({ children }) {
     </div>
   )
 }
+*/

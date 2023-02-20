@@ -19,7 +19,7 @@ export async function getStaticProps() {
 export default function Recipes({ recipes }) {
   console.log(recipes)
   return (
-    <div className="recipe-list">
+    <div className="recipe-list sm:container mx-auto my-10 max-w-[400px]">
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}

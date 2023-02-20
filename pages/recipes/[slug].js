@@ -41,7 +41,7 @@ export default function RecipeDetails({ recipe }) {
   console.log(method)
 
   return (
-    <div>
+    <div className="max-w-[400px] sm:container mx-auto mt-10">
       <div className="banner">
         <Image
           src={"https:" + featuredImage.fields.file.url}
@@ -53,7 +53,7 @@ export default function RecipeDetails({ recipe }) {
 
       <div className="info">
         <p>Takes about {cookingTime} mins to cook.</p>
-        <h3>Ingredients:</h3>
+        <h3 className="font-bold">Ingredients:</h3>
 
         {ingredients.map((ing) => (
           <span key={ing}>{ing}</span>
@@ -61,7 +61,7 @@ export default function RecipeDetails({ recipe }) {
       </div>
 
       <div className="method">
-        <h3>Method:</h3>
+        <h3 className="font-bold">Method:</h3>
         <div>{documentToReactComponents(method)}</div>
       </div>
     </div>
